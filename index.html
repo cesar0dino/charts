@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h1>Best TMNT?</h1></center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<center><div style="width: 1500px">
+    <canvas id="myChart"></canvas>
+</div>
+</center>
+<script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Ralph', 'Leo', 'Mikey', 'Donnie', 'Jennika'],
+            datasets: [{
+                label: '# of Votes',
+                data: [5, 2, 8, 4, 1],
+                backgroundColor: [
+                    'rgba(255,0,0,0.2)',
+                    'rgba(0,55,255,0.25)',
+                    'rgba(143,0,255,0.2)',
+                    "rgba(255,128,0,0.32)",
+                    'rgba(255,253,0,0.25)'
+                ],
+                borderColor: [
+                    'rgb(112,0,0)',
+                    'rgb(0,36,148)',
+                    'rgb(54,0,166)',
+                    'rgb(255,166,103)',
+                    'rgb(128,111,0)'
+                ],
+                borderWidth: 6
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<canvas id="myChart"></canvas>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      datasets: [{
+        data: [100, 54, 14, 43, 76, 20, 94, 100, 82, 55, 87,99],
+        label: 'Candy',
+        borderColor: 'rgba(120, 120, 255,1)'
+      },
+        {
+          data:[12, 77, 23, 96, 113, 84, 55, 89, 42, 19, 87, 92],
+          label:'Clothes',
+          borderColor: 'rgba(225, 100, 255, 1)'
+        },
+          {
+              data:[60, 34, 123, 65, 76, 49, 79, 82, 60, 100, 92, 60],
+              label:'Movies',
+              borderColor: 'rgba(141,8,28,0.89)'
+          },
+        {
+          data:[33, 72, 110, 90, 92, 78, 100, 76, 55, 71, 69, 80],
+          label:'Amazon',
+          borderColor: 'rgba(100, 200, 100, 1)'
+      }]
+    },
+    options:{
+      plugins:{
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+</script>
+<canvas id='chart2'></canvas>
+<script>
+  var cty = document.getElementById('chart2');
+  var nextChart = new Chart(cty, {
+    type: 'scatter',
+    data: {
+      datasets:[{
+          label: 'Dataset1',
+          backgroundColor: 'rgba(255, 200, 50, 1)',
+          pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+          pointRadius: 4,
+          data: [
+              {x: 7, y: 10},
+              {x: 43, y: 25},
+              {x: 51, y: 32},
+              {x: 46, y: 21},
+              {x: 54, y: 72},
+              {x: 15, y: 97},
+              {x: 85, y: 57},
+              {x: 71, y: 39}
+          ]
+      }, {
+          label: 'Dataset2',
+          backgroundColor: 'rgba(50, 200, 50, 1)',
+          pointBackgroundColor: 'rgba(50, 200, 50, 1)',
+          pointRadius: 4,
+          data: [
+              {x: 23, y: 56},
+              {x: 31, y: 44},
+              {x: 87, y: 56},
+              {x: 28, y: 39},
+              {x: 33, y: 44},
+              {x: 49, y: 65},
+              {x: 18, y: 69},
+              {x: 2, y: 99}
+              ]
+      }, {
+          label: 'Dataset3',
+          backgroundColor: 'rgb(7,88,231)',
+          pointBackgroundColor: 'rgba(7, 88, 231)',
+          pointRadius: 4,
+          data: [
+              {x: 32, y: 56},
+              {x: 13, y: 44},
+              {x: 78, y: 56},
+              {x: 82, y: 39},
+              {x: 39, y: 44},
+              {x: 94, y: 65},
+              {x: 81, y: 69},
+              {x: 28, y: 99},
+              {x: 88, y: 69},
+              {x: 30, y: 99}
+          ]
+      }, {
+          label: 'Dataset3',
+          backgroundColor: 'rgb(230,169,250)',
+          pointBackgroundColor: 'rgba(230, 169, 250)',
+          pointRadius: 4,
+          data: [
+              {x: 42, y: 56},
+              {x: 41, y: 44},
+              {x: 97, y: 56},
+              {x: 38, y: 39},
+              {x: 100, y: 44},
+              {x: 5, y: 65},
+              {x: 75, y: 69},
+              {x: 44, y: 99},
+              {x: 91, y: 69},
+              {x: 67, y: 99}
+          ]
+      }
+      ]
+    },
+    options:{
+        scales: {
+            xAxis: {
+                beginAtZero: true
+            },
+            yAxis: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display:true,
+                text:'Sales'
+            }
+        }
+    }
+  });
+</script>
+
+</body>
+</html>
