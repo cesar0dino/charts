@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+<center>
+<div style='width: 200px'>
+  <h1>Gen 1</h1>
+  <canvas id='myChart'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type:'doughnut',
+    data: {
+      labels: ['Bulbasaur', 'Squirtle', 'Charmander'],
+      datasets: [{
+        label:'My First Doughnut Today',
+        data:[33.7, 24.2, 42.1,],
+        backgroundColor:[
+          'rgb(29,164,13)',
+          'rgb(87,168,245)',
+          'rgb(246,46,46)',
+
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+</center>
+
+<center>
+<div style='width: 300px'>
+  <h1>Gen 2</h1>
+  <canvas id='myChart2'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart2');
+  var myChart = new Chart(ctx, {
+    type:'pie',
+    data: {
+      labels: ['Chikorita', 'Cyndaquil', 'Totodile'],
+      datasets: [{
+        label:'My First Doughnut Today',
+        data:[14.6, 44.9, 40.4,],
+        backgroundColor:[
+          'rgb(143,206,14)',
+          'rgb(229,144,45)',
+          'rgb(9,192,192)',
+
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+</center>
+
+<center>
+<div style='width: 400px'>
+  <h1>Gen 3</h1>
+  <canvas id='myChart3'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart3');
+  var myChart = new Chart(ctx, {
+    type:'polarArea',
+    data: {
+      labels: ['Treeko', 'Torchic', 'Mudkip'],
+      datasets: [{
+        label:'My First Doughnut Today',
+        data:[30.5, 27.2, 42.3,],
+        backgroundColor:[
+          'rgb(158,236,88)',
+          'rgb(222,121,6)',
+          'rgb(7,119,189)',
+
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+</center>
+</body>
+</html>
